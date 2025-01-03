@@ -1,0 +1,280 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos generales */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #555;
+    color: #fff;
+}
+
+/* Header */
+.encabezado {
+    background: #333;
+    padding: 1rem; /* Reduce el padding para pantallas más pequeñas */
+    position: relative;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between; /* Cambia a space-between para mejor distribución */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea en pantallas pequeñas */
+    position: relative;
+}
+
+.titulo {
+    margin: 0;
+    font-size: 1.8rem; /* Reduce el tamaño del título */
+    text-align: center;
+    flex-basis: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    margin-bottom: 1rem; /* Agrega margen inferior para separar del menú */
+}
+
+.nav {
+    margin-left: auto; /* Elimina el margen izquierdo */
+    text-align: center; /* Centra el menú en pantallas pequeñas */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* Permite que los elementos del menú se muevan a la siguiente línea */
+}
+
+.nav-link {
+    margin: 0 0.5rem; /* Reduce el margen horizontal */
+    text-decoration: none;
+    color: #727272;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 767px) {
+    .nav-list {
+        justify-content: center; /* Centra los elementos del menú horizontalmente */
+    }
+}
+/* Sobre Mí */
+#sobre-mi {
+    text-align: center;
+    padding: 2rem;
+}
+
+
+.seccion--presentacion {
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Permite que la sección se adapte al contenido */
+    width: 70%; /* Ajusta el ancho para que se vea bien en pantallas más pequeñas */
+    margin: 2rem auto;
+    padding: 1rem;
+    border: rgb(76, 28, 28) solid 4px;
+    box-shadow: 10px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.foto-tarjeta {
+    max-width: 100%; /* Permite que la imagen ocupe todo el ancho disponible */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.foto-tarjeta img {
+    height: 18rem;
+    width: 18rem;
+}
+
+.seccion--presentacion p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    text-align: center; /* Centra el texto para una mejor visualización en pantallas pequeñas */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 767px) {
+    .seccion--presentacion {
+        width: 90%;
+    }
+    .foto-tarjeta {
+        max-height: 18rem; /* Aumenta el tamaño de la imagen en pantallas pequeñas */
+    }
+}
+
+.titulo--proyectos {
+    display: flex;
+    justify-content: center;
+}
+
+/* Sección "Proyectos" */
+
+.seccion--proyectos {
+    display: flex;
+    border: rgb(76, 28, 28) solid 4px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    margin: 0 1rem 2rem 1rem;
+}
+
+.contenedor-proyecto {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    outline: 4px solid #473434;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    padding: 3rem;
+    margin: 2rem 1rem;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.contenedor-proyecto img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #fff;
+    aspect-ratio: 15/10;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contenedor-proyecto p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+}
+
+.contenedor-proyecto a {
+    margin-top: 1rem;
+    color: #e0e0e0;
+    align-self: center;
+    text-align: center;
+
+}
+
+@media (max-width: 1200px) { /* Ajusta el breakpoint según tus necesidades */
+    .seccion--proyectos {
+        flex-direction: column;
+
+    }
+
+    .contenedor-proyecto {
+        max-width: 80%; /* Ocupa todo el ancho disponible */
+        margin: 1rem auto;
+    }
+
+    .contenedor-proyecto img {
+        width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+        height: auto; /* Permite que la altura se ajuste proporcionalmente */
+    }
+
+    .contenedor-proyecto p {
+        font-size: 16px; /* Ajusta el tamaño de la fuente si es necesario */
+    }
+}
+
+/* Sección "Contacto" */
+#contacto {
+    padding: 4rem;
+    text-align: center;
+}
+
+.seccion--contactos {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 60%;
+    margin: 0 auto;
+    padding: 1rem;
+    border: rgb(76, 28, 28) solid 4px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+    .seccion--contactos h2 {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+input, button {
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 300px; /* Limita el ancho máximo */
+}
+
+input, textarea, button {
+    transition: all 0.3s ease;
+    border: 2px solid #ddd;
+}
+
+input:focus, textarea:focus, button:focus {
+    outline: none;
+    border-color: #000; /* Color de enfoque */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+textarea { 
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    resize: none;
+    width: 25%;
+    field-sizing: content;
+    min-height: 4lh;
+    max-height: 6lh;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    /* Estilos para pantallas pequeñas */
+    .seccion--contactos {
+    padding: 1rem;
+    }
+}
+
+footer {
+    background: #333;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+footer a {
+    color: #ddd;
+    font-size: 1.3rem;
+}
